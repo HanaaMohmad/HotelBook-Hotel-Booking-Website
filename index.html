@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover handpicked hotels and plan your next stay with HotelBook.">
+<title>HotelBook — Find Your Perfect Stay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="HotelBook home"><span class="brand-icon">⌂</span><span><b>Hotel<span>Book</span></b><small>Stay Better, Travel Farther</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  <nav id="mainNav"><a class="active" href="#home">Home</a><a href="#hotels">Hotels</a><a href="#destinations">Destinations</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <button class="sign-in" id="signInBtn">♙ &nbsp; Sign In</button>
+</header>
+<main>
+<section class="hero" id="home">
+  <img class="hero-image" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=88" alt="Luxury hotel resort with swimming pool" />
+  <div class="hero-shade"></div>
+  <div class="hero-copy"><span class="eyebrow">✦ YOUR NEXT STAY AWAITS</span><h1>Find Your<br>Perfect <em>Hotel</em></h1><p>Discover amazing hotels, compare options, and plan a stay worth remembering.</p><a class="primary-btn" href="#search">⌕ &nbsp; Search Hotels <span>→</span></a></div>
+</section>
+<section class="search-shell" id="search">
+ <form class="search-panel" id="searchForm">
+  <label class="search-field"><span>⌖</span><span class="field-content"><small>Destination</small><select id="destination"><option value="">Anywhere in Egypt</option><option>Sharm El Sheikh</option><option>Hurghada</option><option>Cairo</option><option>Alexandria</option></select></span></label>
+  <label class="search-field"><span>▦</span><span class="field-content"><small>Check-in</small><input type="date" id="checkin" required></span></label>
+  <label class="search-field"><span>▦</span><span class="field-content"><small>Check-out</small><input type="date" id="checkout" required></span></label>
+  <label class="search-field"><span>♙</span><span class="field-content"><small>Guests</small><select id="guests"><option>2 Adults</option><option>1 Adult</option><option>3 Adults</option><option>4 Adults</option><option>2 Adults, 1 Child</option><option>2 Adults, 2 Children</option></select></span></label>
+  <button class="search-btn" type="submit">⌕ Search</button>
+ </form>
+ <p id="searchMessage" class="search-message" aria-live="polite"></p>
+</section>
+<section class="trust-row" id="about">
+ <article><span class="trust-icon">✓</span><div><b>Best Price Promise</b><small>Great stays for your budget</small></div></article>
+ <article><span class="trust-icon">★</span><div><b>Top Rated Hotels</b><small>Guest-loved places to stay</small></div></article>
+ <article><span class="trust-icon">⌖</span><div><b>Great Destinations</b><small>Explore Egypt's highlights</small></div></article>
+ <article><span class="trust-icon">☏</span><div><b>Helpful Support</b><small>Here when you need us</small></div></article>
+</section>
+<section class="section destinations-section" id="destinations">
+ <div class="section-heading"><div><span class="kicker">EXPLORE EGYPT</span><h2>Popular Destinations</h2><p>Choose a destination for your next getaway.</p></div><a class="text-link" href="#hotels">Browse hotels <span>→</span></a></div>
+ <div class="destination-grid">
+  <button class="destination-card" data-destination="Sharm El Sheikh"><img loading="lazy" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=85" alt="Beach resort in Sharm El Sheikh"><span class="destination-overlay"></span><span class="destination-name">Sharm El Sheikh<small>Red Sea escapes</small></span></button>
+  <button class="destination-card" data-destination="Hurghada"><img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85" alt="Sunny island resort in Hurghada"><span class="destination-overlay"></span><span class="destination-name">Hurghada<small>Beaches & diving</small></span></button>
+  <button class="destination-card" data-destination="Cairo"><img loading="lazy" src="assets/destination-cairo.jpg" alt="Cairo skyline at sunset"><span class="destination-overlay"></span><span class="destination-name">Cairo<small>Culture & city life</small></span></button>
+  <button class="destination-card" data-destination="Alexandria"><img loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Mediterranean coastal resort in Alexandria"><span class="destination-overlay"></span><span class="destination-name">Alexandria<small>Mediterranean charm</small></span></button>
+ </div>
+</section>
+<section class="video-section" id="hotel-video">
+ <div class="video-copy"><span class="kicker">SEE THE EXPERIENCE</span><h2>Imagine waking up here.</h2><p>Take a quick look at a real resort video and picture your next escape.</p><a class="text-link" href="https://www.pexels.com/video/drone-footage-of-a-hotel-resort-4185240/" target="_blank" rel="noopener">Video source: Pexels <span>↗</span></a></div>
+ <div class="video-frame"><video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85" aria-label="Real stock video of a luxury resort and swimming pool"><source src="https://videos.pexels.com/video-files/4185240/4185240-hd_1920_1080_25fps.mp4" type="video/mp4">Your browser does not support HTML video. <a href="https://www.pexels.com/video/drone-footage-of-a-hotel-resort-4185240/">Watch the video on Pexels</a>.</video><span class="video-caption">REAL RESORT FOOTAGE · PEXELS</span></div>
+</section>
+<section class="section hotels-section" id="hotels">
+ <div class="section-heading"><div><span class="kicker">HANDPICKED FOR YOU</span><h2>Featured Hotels</h2><p>Comfortable stays for every kind of trip.</p></div><button class="text-link button-link" id="showAll">View all <span>→</span></button></div>
+ <div class="hotel-grid" id="hotelGrid">
+  <article class="hotel-card" data-city="sharm el sheikh hurghada"><div class="hotel-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85" alt="Sunset Beach Resort beachfront hotel"><span class="badge navy">Top Rated</span></div><div class="hotel-info"><h3>Sunset Beach Resort</h3><p class="location">⌖ Hurghada, Egypt</p><p class="rating"><span>★</span> 4.8 <small>(124 reviews)</small></p><div class="amenities"><span>⌁ Free Wi-Fi</span><span>♧ Pool</span><span>♨ Breakfast</span></div><div class="card-bottom"><p class="price">$120 <small>/ night</small></p><button class="book-btn" data-hotel="Sunset Beach Resort" data-price="$120">Book Now</button></div></div></article>
+  <article class="hotel-card" data-city="cairo"><div class="hotel-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1000&q=85" alt="Modern guest room at Cairo Grand Hotel"><span class="badge blue">Popular</span></div><div class="hotel-info"><h3>Cairo Grand Hotel</h3><p class="location">⌖ Cairo, Egypt</p><p class="rating"><span>★</span> 4.6 <small>(98 reviews)</small></p><div class="amenities"><span>⌁ Free Wi-Fi</span><span>♧ Gym</span><span>♜ Restaurant</span></div><div class="card-bottom"><p class="price">$95 <small>/ night</small></p><button class="book-btn" data-hotel="Cairo Grand Hotel" data-price="$95">Book Now</button></div></div></article>
+  <article class="hotel-card" data-city="hurghada"><div class="hotel-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=85" alt="Paradise Resort with tropical pool"><span class="badge green">Best Value</span></div><div class="hotel-info"><h3>Paradise Resort</h3><p class="location">⌖ Hurghada, Egypt</p><p class="rating"><span>★</span> 4.7 <small>(156 reviews)</small></p><div class="amenities"><span>⌁ Free Wi-Fi</span><span>♧ Pool</span><span>♢ Spa</span></div><div class="card-bottom"><p class="price">$150 <small>/ night</small></p><button class="book-btn" data-hotel="Paradise Resort" data-price="$150">Book Now</button></div></div></article>
+  <article class="hotel-card" data-city="alexandria"><div class="hotel-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1578774204375-826dc5d996ed?auto=format&fit=crop&w=1000&q=85" alt="Royal Palace Hotel luxury pool and suites"><span class="badge purple">Luxury</span></div><div class="hotel-info"><h3>Royal Palace Hotel</h3><p class="location">⌖ Alexandria, Egypt</p><p class="rating"><span>★</span> 4.9 <small>(201 reviews)</small></p><div class="amenities"><span>⌁ Free Wi-Fi</span><span>♢ Spa</span><span>♜ Restaurant</span></div><div class="card-bottom"><p class="price">$200 <small>/ night</small></p><button class="book-btn" data-hotel="Royal Palace Hotel" data-price="$200">Book Now</button></div></div></article>
+  <article class="hotel-card" data-city="cairo marsa alam"><div class="hotel-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=85" alt="Blue Lagoon Hotel comfortable room"><span class="badge orange">Family Stay</span></div><div class="hotel-info"><h3>Blue Lagoon Hotel</h3><p class="location">⌖ Marsa Alam, Egypt</p><p class="rating"><span>★</span> 4.5 <small>(87 reviews)</small></p><div class="amenities"><span>⌁ Free Wi-Fi</span><span>♧ Pool</span><span>♙ Family Rooms</span></div><div class="card-bottom"><p class="price">$110 <small>/ night</small></p><button class="book-btn" data-hotel="Blue Lagoon Hotel" data-price="$110">Book Now</button></div></div></article>
+  <article class="hotel-card" data-city="sharm el sheikh"><div class="hotel-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85" alt="The View Hotel in Sharm El Sheikh"><span class="badge teal">Romantic</span></div><div class="hotel-info"><h3>The View Hotel</h3><p class="location">⌖ Sharm El Sheikh, Egypt</p><p class="rating"><span>★</span> 4.7 <small>(112 reviews)</small></p><div class="amenities"><span>⌁ Free Wi-Fi</span><span>♧ Pool</span><span>♨ Breakfast</span></div><div class="card-bottom"><p class="price">$140 <small>/ night</small></p><button class="book-btn" data-hotel="The View Hotel" data-price="$140">Book Now</button></div></div></article>
+ </div>
+ <p class="empty-state" id="emptyState" hidden>No hotels match this destination. Choose another destination.</p>
+</section>
+<section class="why-section">
+ <div class="why-image"><img loading="lazy" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=85" alt="A relaxing resort experience by the pool"></div>
+ <div class="why-copy"><span class="kicker">TRAVEL WITH CONFIDENCE</span><h2>Your stay, made simple.</h2><p>Discover handpicked places, compare your options, and plan a stay that suits you.</p><div class="why-points"><article><span>✓</span><div><b>Easy Search</b><small>Find a stay that matches your plans.</small></div></article><article><span>♡</span><div><b>Thoughtful Picks</b><small>Options for families, couples, and solo trips.</small></div></article><article><span>◇</span><div><b>Clear Details</b><small>See key amenities before you choose.</small></div></article><article><span>☏</span><div><b>Support Ready</b><small>Help is always close at hand.</small></div></article></div></div>
+</section>
+<section class="contact-band" id="contact"><div><span class="kicker">READY FOR YOUR NEXT TRIP?</span><h2>Make room for a little getaway.</h2><p>Explore destinations and find your next favorite stay.</p></div><a class="primary-btn" href="#search">Start Exploring →</a></section>
+</main>
+<footer><a class="brand footer-brand" href="#home"><span class="brand-icon">⌂</span><span><b>Hotel<span>Book</span></b><small>Stay Better, Travel Farther</small></span></a><p>© 2026 HotelBook. Demo website for portfolio use.</p><div><a href="#hotels">Hotels</a><a href="#destinations">Destinations</a><a href="#contact">Contact</a></div></footer>
+<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><span class="kicker">HOTELBOOK</span><h2 id="modalTitle">Book your stay</h2><p id="modalDescription"></p><form id="bookingForm"><label>Your name<input id="guestName" required placeholder="Enter your name"></label><label>Email address<input id="guestEmail" type="email" required placeholder="you@example.com"></label><label>Check-in<input id="modalCheckin" type="date" required></label><label>Check-out<input id="modalCheckout" type="date" required></label><button class="search-btn" type="submit">Confirm demo booking</button></form><p class="demo-note">Demo only — no payment is taken and no real reservation is created.</p></section></div>
+<script src="script.js"></script>
+</body></html>
